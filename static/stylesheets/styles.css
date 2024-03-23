@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #162900;
+}
+
+a:visited {
+    color: #162900;
+}
+a:focus {
+    color: #162900;
+}
+
+a:hover {
+    background-color: #2C3D13;
+    color: white;
+}
+
+a:active {
+    color: #162900;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+h1 {
+    font-size: 72px;
+    font-family: "Koulen", sans-serif;
+    color: #586822;
+}
+
+h2 {
+    color:#586822;
+    font-size: 48px;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+}
+
+nav {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items {
+    padding: .5rem 1rem .5rem 1rem;
+    font-family: "Crimson Text", serif;
+}
+
+.logo {
+    width: 20rem;
+    height: 20rem;
+}
+
+.eco-header {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    width: 100vw;
+    height: 90vh;
+    background-color: aliceblue;
+}
+
+.title-area {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #586822;
+    grid-row: 1 / span 12;
+    grid-column: 1 / span 8;
+    width: 100%;
+    height: 100%;
+}
+
+.dark-green {
+    background-color: #2C3D13;
+    grid-row: 1 / span 12;
+    grid-column: 8 / span 1;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 60%;
+    height: 60%;
+    text-align: center;
+}
+
+#hero-text-override {
+    font-family: "Crimson Text", serif;
+    color: white;
+    font-size: 60px;
+}
+
+.hero-button {
+    text-align: center;
+    color:#162900;
+    width: 35%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-button-text {
+    font-size: 32px;
+    font-family: "Koulen", sans-serif;
+    background-color: white;
+    padding: .5rem 2rem .5rem 2rem;
+}
+
+.hero-button-text:hover {
+    background-color: #162900;
+}
+
+.darker-green {
+    background-color: #162900;
+    grid-row: 1 / span 12;
+    grid-column: 9 / span 1;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-row: 1 / span 12;
+    grid-column: 10 / span 11;
+    width: 100%;
+    height: 100%;
+    background-image: url(/static/image/title-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stats {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.main-text {
+    height: 15%;
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem;
+}
+
+footer {
+    width: 100%;
+    padding: 2rem;
+    background-color: #162900;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
