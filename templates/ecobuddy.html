@@ -72,7 +72,15 @@
       }
     </style>
 </head>
+
 <body>
+  <header>
+    <nav>
+        <a href="{{ url_for('index')}}"><div class="nav-items">Home</div></a>
+        <a href="{{ url_for('ecoeater')}}"><div class="nav-items">EcoEater</div></a>
+        <a href="{{ url_for('ecobuddy')}}"><div class="nav-items">EcoBuddy</div></a>
+    </nav>
+</header>
 <div>
         <h1 ><b>AI-Gen ChatBot</b></h1>
         <h4 ><b>Please start your personalized interaction with the chatbot</b></h4>
