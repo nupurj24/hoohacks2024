@@ -43,7 +43,7 @@
       .userText span {
         background-color: #2C3D13;
         padding: 10px;
-        border-radius: 2px;
+        border-radius: 4px;
       }
       .botText {
         color: white;
@@ -55,7 +55,7 @@
       .botText span {
         background-color: #586822;
         padding: 10px;
-        border-radius: 2px;
+        border-radius: 4px;
       }
       #tidbit {
         position: absolute;
@@ -109,7 +109,7 @@
                     if (e.which == 13) {
                         e.preventDefault();
                         getBotResponse();
-                        var response = "Hello! Of course, I'd be happy to help you with recycling ideas for your plastic container from a restaurant. Here are a few sustainable solutions you can consider: \n 1. Reuse for Food Storage 2. Organizing Supplies 3. DIY Plant Pot 4. Art and Craft Project 5. Donate or Share \n Remember, always check with your local recycling guidelines to see if plastic containers are accepted in your recycling program. If not, exploring these alternative ways to reuse or repurpose them is a sustainable and eco-friendly option. Let me know if you need more recycling ideas or tips!";
+                        var response = "Hello! Of course, I'd be happy to help you with recycling ideas for your plastic container from a restaurant. Here are a few sustainable solutions you can consider: <br> 1. Reuse for Food Storage <br> 2. Organizing Supplies <br> 3. DIY Plant Pot <br> 4. Art and Craft Project <br> 5. Donate or Share <br> Remember, always check with your local recycling guidelines to see if plastic containers are accepted in your recycling program. If not, exploring these alternative ways to reuse or repurpose them is a sustainable and eco-friendly option. Let me know if you need more recycling ideas or tips!";
                         var botHtml = '<p class="botText"><span>' + response + "</span></p>";
                         $("#chatbox").append(botHtml);
                     }
