@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/stylesheets/styles.css">
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5NGeW3cjmMYWh49vI_DJU4Gb0wz493pI&libraries=places&loading=async&callback=initMap"></script>
-    <title>Title</title>
+    <title>EcoEats</title>
     <style>
         #map {
           height: 90%;
@@ -39,7 +39,7 @@
 
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 35.9097, lng: -79.0483}, // Default center location (UNC)
-            zoom: 14,
+            zoom: 13,
             styles: remove_default_markers
       });
 
@@ -61,23 +61,26 @@
             }
           });
 
-          // make request to Google Place API for given restaurants in 10 mile radius 
-          var request = {
-            location: pos,
-            radius: '16093.4', // 10 miles in meters
-            keyword: 'CAVA' 
-          };
+          var ecorestaurants = JSON.parse('{{ ecorestaurants | tojson | safe }}');
+          ecorestaurants.forEach(function(ecorestaurant) {
+            // make request to Google Place API for given restaurants in 10 mile radius 
+            var request = {
+                location: pos,
+                radius: '16093.4', // 10 miles in meters
+                keyword: ecorestaurant.name
+            };
 
-        // create markers for the restaurants found in the request
-          var service = new google.maps.places.PlacesService(map);
-          service.nearbySearch(request, function(results, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-              for (var i = 0; i < results.length; i++) {
-                var place = results[i];
-                createMarker(place);
-              }
-            }
-          });
+            // create markers for the restaurants found in the request
+            var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, function(results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    for (var i = 0; i < results.length; i++) {
+                        var place = results[i];
+                        createMarker(place);
+                    }
+                }
+            });
+        });
           
         }, function() {
           handleLocationError(true, map.getCenter());
@@ -90,7 +93,12 @@
     function createMarker(place) {
       var marker = new google.maps.Marker({
         map: map,
-        position: place.geometry.location
+        position: place.geometry.location,
+        label: {
+            text: place.name,
+            color: 'black',
+            fontSize: '10px' 
+        }
       });
       
       var infowindow = new google.maps.InfoWindow({
