@@ -7,6 +7,12 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-family: "Crimson Text", serif;
+    font-size: 24px;
+    text-align: center;
+}
+
 a:link {
     color: #162900;
 }
@@ -42,6 +48,11 @@ h1 {
 h2 {
     color:#586822;
     font-size: 48px;
+    line-height: .8;
+}
+
+h3,h4 {
+    font-family: "Crimson Text", serif;
 }
 
 header {
@@ -66,6 +77,12 @@ nav {
 .logo {
     width: 20rem;
     height: 20rem;
+}
+
+.logo-small {
+    margin-top: 2rem;
+    width: 10rem;
+    height: 10rem;
 }
 
 .eco-header {
@@ -120,7 +137,7 @@ nav {
     height: 30%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .hero-button-text {
@@ -163,6 +180,7 @@ nav {
 }
 
 .stats-header {
+    padding-top: 2rem;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
