@@ -22,9 +22,21 @@
 </head>
 
 <body>
-    <header>ECOEATER</header>
+  <header>
+    <nav>
+        <a href="{{ url_for('index')}}"><div class="nav-items">Home</div></a>
+        <a href="{{ url_for('ecoeater')}}"><div class="nav-items">EcoEater</div></a>
+        <a href="#"><div class="nav-items">EcoBuddy</div></a>
+    </nav>
+</header>
 
     <div id="map"></div>
+    <br>
+    <footer>
+      <h3>Contact Us: email@domain.com</h3>
+      <h4>Copyright 2024</h4>
+    </footer>
+
     <script>
     var map;
 

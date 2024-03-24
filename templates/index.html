@@ -13,8 +13,8 @@
 <body>
     <header>
         <nav>
-            <a href="#"><div class="nav-items">Home</div></a>
-            <a href="#"><div class="nav-items">EcoEater</div></a>
+            <a href="{{ url_for('index')}}"><div class="nav-items">Home</div></a>
+            <a href="{{ url_for('ecoeater')}}"><div class="nav-items">EcoEater</div></a>
             <a href="#"><div class="nav-items">EcoBuddy</div></a>
         </nav>
     </header>
@@ -29,7 +29,7 @@
                 <h1 id="hero-text-override">Mapping sustainable approaches to dining out.</h1>
             </div>
             <div class="hero-button">
-                <a href="#"><div class="hero-button-text">Try Our Map</div></a>
+                <a href="{{ url_for('ecoeater')}}"><div class="hero-button-text">Try Our Map</div></a>
             </div>
         </div>
     </div>
@@ -44,6 +44,11 @@
             <h2>40 million tons</h2>
             <p>of municipal plastic waste was generated in 2021.</p>
         </div>
+        <div class="main-text">
+            <p>In order to limit the waste that we create, and to urge restaurants to start providing more ecofriendly and compostable options <br> 
+                for things like silverware and to-go boxes, we have created a map to promote businesses that provide these alternatives to plastic items.</p>
+        </div>
+        <img class="logo-small" src="/static/image/green-leaf.png" alt="EcoEats leaf logo.">
     </div>
 
     <footer>
