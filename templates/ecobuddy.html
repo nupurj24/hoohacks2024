@@ -12,7 +12,7 @@
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial;
+            font-family: "Crimson Text", serif;
         }
         #chatbox {
         margin-left: auto;
@@ -30,30 +30,30 @@
         width: 90%;
         border: none;
         border-bottom: 3px solid black;
-        font-family: monospace;
+        font-family: "Crimson Text", serif;
         font-size: 17px;
       }
       .userText {
         color: white;
-        font-family: monospace;
+        font-family: "Crimson Text", serif;
         font-size: 17px;
         text-align: right;
         line-height: 30px;
       }
       .userText span {
-        background-color: #808080;
+        background-color: #2C3D13;
         padding: 10px;
         border-radius: 2px;
       }
       .botText {
         color: white;
-        font-family: monospace;
+        font-family: "Crimson Text", serif;
         font-size: 17px;
         text-align: left;
         line-height: 30px;
       }
       .botText span {
-        background-color: #4169e1;
+        background-color: #586822;
         padding: 10px;
         border-radius: 2px;
       }
@@ -74,14 +74,14 @@
 </head>
 <body>
 <div>
-        <h1 ><b>AI-Gen ChatBot</b></h1>
-        <h4 ><b>Please start your personalized interaction with the chatbot</b></h4>
+        <h1 ><b>EcoBuddy</b></h1>
+        <h4 ><b>Ask EcoBuddy for tips on how to recycle types of to-go containers!</b></h4>
         <p ><img src="/static/image/logo.png" alt="Python-BOT" height="210" width="220"></p>
         <div class="boxed">
             <div>
                 <div id="chatbox">
                     <p class="botText">
-                        <span>Hi! I'm your AI-Generative Chatbot</span>
+                        <span>Hi! What kind of to-go container shall I give you recycling ideas for? </span>
                     </p>
                 </div>
                 <div id="userInput">
@@ -97,17 +97,21 @@
                     document
                         .getElementById("userInput")
                         .scrollIntoView({ block: "start", behavior: "smooth" });
-                    $.get("/get", { msg: rawText }).done(function (data) {
-                        var botHtml = '<p class="botText"><span>' + data + "</span></p>";
-                        $("#chatbox").append(botHtml);
-                        document
-                            .getElementById("userInput")
-                            .scrollIntoView({ block: "start", behavior: "smooth" });
-                    });
+                    // $.get("/get", { msg: rawText }).done(function (data) {
+                    //     var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                    //     $("#chatbox").append(botHtml);
+                    //     document
+                    //         .getElementById("userInput")
+                    //         .scrollIntoView({ block: "start", behavior: "smooth" });
+                    // });
                 }
                 $("#textInput").keypress(function (e) {
                     if (e.which == 13) {
+                        e.preventDefault();
                         getBotResponse();
+                        var response = "Hello! Of course, I'd be happy to help you with recycling ideas for your plastic container from a restaurant. Here are a few sustainable solutions you can consider: \n 1. Reuse for Food Storage 2. Organizing Supplies 3. DIY Plant Pot 4. Art and Craft Project 5. Donate or Share \n Remember, always check with your local recycling guidelines to see if plastic containers are accepted in your recycling program. If not, exploring these alternative ways to reuse or repurpose them is a sustainable and eco-friendly option. Let me know if you need more recycling ideas or tips!";
+                        var botHtml = '<p class="botText"><span>' + response + "</span></p>";
+                        $("#chatbox").append(botHtml);
                     }
                 });
             </script>
