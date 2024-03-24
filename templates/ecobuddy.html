@@ -3,6 +3,7 @@
 <head>
     <title>GenAI-Bot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/stylesheets/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
         * {
@@ -72,11 +73,19 @@
       }
     </style>
 </head>
+
 <body>
+  <header id="extra">
+    <nav>
+        <a href="{{ url_for('index')}}"><div class="nav-items">Home</div></a>
+        <a href="{{ url_for('ecoeater')}}"><div class="nav-items">EcoEater</div></a>
+        <a href="{{ url_for('ecobuddy')}}"><div class="nav-items">EcoBuddy</div></a>
+    </nav>
+</header>
 <div>
+  <p ><img src="/static/image/green-leaf.png" alt="Python-BOT" height="150" width="150"></p>
         <h1 ><b>EcoBuddy</b></h1>
         <h4 ><b>Ask EcoBuddy for tips on how to recycle types of to-go containers!</b></h4>
-        <p ><img src="/static/image/logo.png" alt="Python-BOT" height="210" width="220"></p>
         <div class="boxed">
             <div>
                 <div id="chatbox">
@@ -117,5 +126,10 @@
             </script>
         </div>
     </div>
+    <br>
+    <footer>
+      <h3>Contact Us: email@domain.com</h3>
+      <h4>Copyright 2024</h4>
+  </footer>
 </body>
 </html>

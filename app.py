@@ -27,6 +27,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 def ecobuddy():    
     return render_template("ecobuddy.html")
 
+
 @app.route("/get")
 def get_bot_response():    
     userText = request.args.get('msg')  

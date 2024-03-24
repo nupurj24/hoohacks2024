@@ -53,6 +53,11 @@ h2 {
 
 h3,h4 {
     font-family: "Crimson Text", serif;
+    text-align: center;
+}
+
+span {
+    font-family: "Crimson Text", serif;
 }
 
 header {
@@ -67,6 +72,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#extra {
+    margin-top: 1rem;
 }
 
 .nav-items {
