@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GenAI-Bot</title>
+    <title>EcoEats</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/static/stylesheets/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,7 +18,7 @@
         #chatbox {
         margin-left: auto;
         margin-right: auto;
-        width: 40%;
+        width: 80%;
         margin-top: 60px;
       }
       #userInput {
@@ -67,9 +67,10 @@
       .boxed {
         margin-left: auto;
         margin-right: auto;
-        width: 78%;
+        width: 1000px;
         margin-top: 60px;
         border: 1px solid green;
+        border-radius: 5px;
       }
     </style>
 </head>
@@ -83,15 +84,16 @@
     </nav>
 </header>
 <div>
-  <p ><img src="/static/image/green-leaf.png" alt="Python-BOT" height="150" width="150"></p>
-        <h1 ><b>EcoBuddy</b></h1>
-        <h4 ><b>Ask EcoBuddy for tips on how to recycle types of to-go containers!</b></h4>
+  <p class="center"><img src="/static/image/green-leaf.png" alt="Python-BOT" height="150" width="150"></p>
+        <h1 class="center"><b>EcoBuddy</b></h1>
+        <h4 class="center"><b>Ask EcoBuddy for tips on how to recycle types of to-go containers!</b></h4>
         <div class="boxed">
             <div>
                 <div id="chatbox">
                     <p class="botText">
                         <span>Hi! What kind of to-go container shall I give you recycling ideas for? </span>
                     </p>
+                    <br>
                 </div>
                 <div id="userInput">
                     <input id="textInput" type="text" name="msg" placeholder="Message" />
@@ -100,7 +102,7 @@
             <script>
                 function getBotResponse() {
                     var rawText = $("#textInput").val();
-                    var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                    var userHtml = '<p class="userText"><span>' + rawText + "</span></p><br><br>";
                     $("#textInput").val("");
                     $("#chatbox").append(userHtml);
                     document
